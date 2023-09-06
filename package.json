@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "ts-node-dev --respawn --transpile-only index.ts"
+    "dev": "ts-node-dev --respawn --transpile-only server.ts"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,10 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vitejs/plugin-vue-jsx": "^3.0.2",
+    "vite": "^4.4.9",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4"
   }
 }

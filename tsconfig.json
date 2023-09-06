@@ -1,6 +1,5 @@
 {
 	"compilerOptions": {
-		"outDir": "dist",
 		"types": ["node"],
 		"target": "ESNext",
 		"useDefineForClassFields": true,
@@ -20,7 +19,14 @@
 			"@/*": ["./src/*", "./netlify/*"]
 		}
 	},
-	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+	"references": [{ "path": "./tsconfig.node.json" }],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"index.ts"
+	],
 	"exclude": [
 		"node_modules",
 		"dist",
@@ -28,8 +34,6 @@
 		"src/**/*.test.ts",
 		"src/**/*.test.tsx",
 		"src/**/*.test.js",
-		"src/**/*.spec.js",
-		"@fawmi/vue-google-maps",
-		"fast-deep-equal"
+		"src/**/*.spec.js"
 	]
 }

@@ -1,7 +1,8 @@
 import { createSSRApp } from 'vue'
+import { createRouter } from './router.ts'
 
 export function createApp() {
-	return createSSRApp({
+	const app = createSSRApp({
 		data: () => ({
 			name: 'world',
 		}),
@@ -9,4 +10,10 @@ export function createApp() {
                 <div>hello {{name}}</div>
         `,
 	})
+
+	const router = createRouter()
+
+	app.use(router)
+
+	return { app, router }
 }
